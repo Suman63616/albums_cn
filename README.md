@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Hosted Link:
-https://upload-csv-cn.onrender.com
+https://albums-cn.onrender.com
 
 ## Available Scripts
 
