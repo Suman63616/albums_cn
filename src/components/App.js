@@ -24,14 +24,7 @@ export default class App extends Component {
     })
   }
 
-  // setLastId=()=>{
-  //   const length=this.state.albums.length;
-  //   const lastId=this.state.albums[length-1].id;
-  //   this.setState({
-  //     lastId:lastId
-  //   })
-  //   console.log(this.state.lastId);
-  // }
+
 
 
   //delete album function-----------------------------------------------------------------------------------
@@ -59,7 +52,7 @@ export default class App extends Component {
     const albums = this.state.albums;
     const index = albums.indexOf(oldAlbum);
     let updatedAlbum = [];
-    if (id < 100) {
+   
       updatedAlbum = await fetch(`https://jsonplaceholder.typicode.com/albums/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
@@ -71,13 +64,7 @@ export default class App extends Component {
           'Content-type': 'application/json; charset=UTF-8',
         },
       }).then((response) => response.json()).then((json) => json);
-    } else {
-      updatedAlbum = {
-        userId: updateUserid,
-        id: id,
-        title: updateTitle
-      }
-    }
+    
     albums[index] = updatedAlbum;
     this.setState({
       albums: albums
